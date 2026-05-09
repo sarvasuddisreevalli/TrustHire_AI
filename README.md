@@ -357,7 +357,7 @@ Great Match for Candidate
 # 👥 Team Members
 
 ```text
-Add Team Member Names Here
+Sarvasuddi Sreevalli, Yanamala Poornitha, Garaga Vijaya, Paila Venkati, Kappala Gnaneshwari 
 ```
 
 ---
@@ -375,7 +375,7 @@ Add Project Screenshots Here
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/trusthire-ai.git
+git clone https://github.com/sarvasuddisreevalli/TrustHire_AI
 ```
 
 ---
