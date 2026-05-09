@@ -357,7 +357,7 @@ Great Match for Candidate
 # 👥 Team Members
 
 ```text
-Sarvasuddi Sreevalli, Yanamala Poornitha, Garaga Vijaya, Paila Venkati, Kappala Gnaneshwari 
+Sarvasuddi Sreevalli, Yanamala Poornitha, Garaga Vijaya, Paila Venkati, Kappala  Kumari Gnaneswari , Machina MahaLaxhmi
 ```
 
 ---
