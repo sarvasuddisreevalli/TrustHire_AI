@@ -456,9 +456,5 @@ By verifying recruiters, detecting fake jobs, analyzing resumes, and matching ca
 
 ---
 
-# 📜 License
 
-This project is licensed under the **MIT License**.
-
----
 
