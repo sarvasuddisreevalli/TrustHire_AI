@@ -1,0 +1,22 @@
+﻿src/components/site/AppLayout.tsx(40,9): error TS2451: Cannot redeclare block-scoped variable 'nav'.
+src/components/site/AppLayout.tsx(84,9): error TS2451: Cannot redeclare block-scoped variable 'nav'.
+src/components/site/AppLayout.tsx(104,20): error TS2339: Property 'map' does not exist on type 'UseNavigateResult<string>'.
+src/components/site/AppLayout.tsx(104,24): error TS7006: Parameter 'item' implicitly has an 'any' type.
+src/routes/_app.admin.recruiters.tsx(24,13): error TS2345: Argument of type 'Dispatch<SetStateAction<any[]>>' is not assignable to parameter of type '(value: unknown) => void | PromiseLike<void>'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'unknown' is not assignable to type 'SetStateAction<any[]>'.
+src/routes/_app.certificate-check.tsx(30,11): error TS18046: 'res' is of type 'unknown'.
+src/routes/_app.dashboard.tsx(136,54): error TS2322: Type '{ id: string; trust: number; ats: number; fraudProb: number; _id: string; title: string; company: string; logo: string; location: string; type: "Full-time" | "Internship" | "Contract" | "Remote"; ... 12 more ...; applicants?: number; }' is not assignable to type 'JobProps'.
+  Types of property 'postedAgo' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+src/routes/_app.jobs.tsx(24,21): error TS2304: Cannot find name 'useAuth'.
+src/routes/_app.jobs.tsx(63,29): error TS2698: Spread types may only be created from object types.
+src/routes/_app.jobs.tsx(112,15): error TS2322: Type '{ id: string; trust: number; ats: number; fraudProb: number; _id: string; title: string; company: string; logo: string; location: string; type: "Full-time" | "Internship" | "Contract" | "Remote"; ... 12 more ...; applicants?: number; }' is not assignable to type 'JobProps'.
+  Types of property 'postedAgo' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+src/routes/_app.recruiter.applicants.tsx(24,13): error TS2345: Argument of type 'Dispatch<SetStateAction<any[]>>' is not assignable to parameter of type '(value: unknown) => void | PromiseLike<void>'.
+  Types of parameters 'value' and 'value' are incompatible.
+    Type 'unknown' is not assignable to type 'SetStateAction<any[]>'.
+src/routes/_app.recruiter.jobs.tsx(44,13): error TS2304: Cannot find name 'apiCreateJob'.

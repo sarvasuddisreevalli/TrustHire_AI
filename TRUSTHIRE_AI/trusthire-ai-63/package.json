@@ -1,0 +1,12 @@
+{
+  "name": "trusthire-platform",
+  "private": true,
+  "scripts": {
+    "dev": "npx concurrently \"cd frontend && npm run dev\" \"cd backend && npm start\"",
+    "install:all": "cd frontend && npm install && cd .. && cd backend && npm install",
+    "test": "cd frontend && npm test && cd .. && cd backend && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
