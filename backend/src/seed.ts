@@ -68,14 +68,14 @@ const seedData = async () => {
         const applications = await Application.insertMany([
             {
                 candidateId: dummyCandidateId,
-                jobId: jobs[0]._id,
+                jobId: jobs[0]!._id,
                 resumeText: 'Experienced React developer...',
                 atsScore: 94,
                 status: 'Interviewing'
             },
             {
                 candidateId: dummyCandidateId,
-                jobId: jobs[1]._id,
+                jobId: jobs[1]!._id,
                 resumeText: 'Python, TensorFlow, PyTorch...',
                 atsScore: 78,
                 status: 'Pending'
