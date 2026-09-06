@@ -94,6 +94,11 @@ const CandidateCard = ({ candidate, showToast, jobsData }: any) => {
                         setInvitedJob(job.title);
                         setShowJobDropdown(false);
                         showToast(`Invitation sent for ${job.title}!`);
+                      } else if (res.status === 400) {
+                        // Already applied/invited
+                        setInvitedJob(job.title);
+                        setShowJobDropdown(false);
+                        showToast(`Candidate was already invited to ${job.title}!`);
                       } else {
                         showToast('Failed to send invite.');
                       }
