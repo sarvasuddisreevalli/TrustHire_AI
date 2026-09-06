@@ -46,8 +46,8 @@ router.post('/ats-analyze', upload.single('resume'), async (req, res): Promise<a
 
         if (file.mimetype === 'application/pdf') {
             resumeText = await new Promise((resolve, reject) => {
-                const pdfParser = new PDFParser(this, 1);
-                pdfParser.on("pdfParser_dataError", errData => reject(errData.parserError));
+                const pdfParser = new PDFParser(this, true);
+                pdfParser.on("pdfParser_dataError", errData => reject((errData as any).parserError || errData));
                 pdfParser.on("pdfParser_dataReady", () => {
                     resolve(pdfParser.getRawTextContent());
                 });
@@ -136,8 +136,8 @@ router.post('/verify-certificate', upload.single('certificate'), async (req, res
 
         if (file.mimetype === 'application/pdf') {
             certificateText = await new Promise((resolve, reject) => {
-                const pdfParser = new PDFParser(this, 1);
-                pdfParser.on("pdfParser_dataError", errData => reject(errData.parserError));
+                const pdfParser = new PDFParser(this, true);
+                pdfParser.on("pdfParser_dataError", errData => reject((errData as any).parserError || errData));
                 pdfParser.on("pdfParser_dataReady", () => {
                     resolve(pdfParser.getRawTextContent());
                 });
