@@ -77,10 +77,29 @@ const CandidateCard = ({ candidate, showToast, jobsData }: any) => {
               jobsData.filter((j: any) => j.status === 'Active').map((job: any) => (
                 <button 
                   key={job._id}
-                  onClick={() => {
-                    setInvitedJob(job.title);
-                    setShowJobDropdown(false);
-                    showToast(`Invitation sent for ${job.title}!`);
+                  onClick={async () => {
+                    try {
+                      const res = await fetch('http://localhost:5000/api/applications', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                          jobId: job._id,
+                          candidateId: candidate._id,
+                          resumeText: 'Invited directly by recruiter from candidate pool.',
+                          atsScore: 100,
+                          status: 'Pending'
+                        })
+                      });
+                      if (res.ok) {
+                        setInvitedJob(job.title);
+                        setShowJobDropdown(false);
+                        showToast(`Invitation sent for ${job.title}!`);
+                      } else {
+                        showToast('Failed to send invite.');
+                      }
+                    } catch (e) {
+                      showToast('Error sending invite.');
+                    }
                   }}
                   style={{ 
                     textAlign: 'left', padding: '0.5rem', fontSize: '0.875rem', fontWeight: 500, color: 'var(--text-main)',
