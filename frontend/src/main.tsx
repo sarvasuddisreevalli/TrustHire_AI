@@ -7,7 +7,10 @@ import App from './App.tsx'
 const originalFetch = window.fetch;
 window.fetch = async function(...args) {
   let [resource, config] = args;
-  const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  let apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+  if (apiUrl.endsWith('/')) {
+    apiUrl = apiUrl.slice(0, -1);
+  }
   if (typeof resource === 'string' && resource.startsWith('http://localhost:5000')) {
     resource = resource.replace('http://localhost:5000', apiUrl);
   }
